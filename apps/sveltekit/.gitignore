@@ -1,0 +1,35 @@
+### Default Node template
+# IntelliJ IDE
+.idea
+
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules/
+
+# dotenv environment variables file
+.env
+.env.*
+!.env.example
+
+# Local History for Visual Studio Code
+.history/
+
+# System files
+.DS_Store
+._*
+
+# Sveltekit
+.svelte-kit
+/package

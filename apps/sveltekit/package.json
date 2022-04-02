@@ -1,0 +1,9 @@
+{
+  "name": "sveltekit",
+  "version": "0.0.0",
+  "type": "module",
+  "devDependencies": {
+    "svelte": "svelte",
+    "@playwright/test": "@playwright/test"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "root": "apps/sveltekit",
+  "projectType": "application",
+  "tags": ["scope:app"],
+  "sourceRoot": "apps/sveltekit/src",
+  "targets": {
+    "sync": {
+      "executor": "@nxext/sveltekit:sveltekit",
+      "options": {
+        "command": "sync"
+      }
+    },
+    "build": {
+      "executor": "@nxext/sveltekit:sveltekit",
+      "options": {
+        "command": "build"
+      },
+      "dependsOn": [
+        {
+          "target": "build",
+          "projects": "dependencies"
+        }
+      ]
+    },
+    "serve": {
+      "executor": "@nxext/sveltekit:sveltekit",
+      "options": {
+        "command": "dev"
+      },
+      "dependsOn": [
+        {
+          "target": "sync",
+          "projects": "self"
+        }
+      ]
+    },
+    "preview": {
+      "executor": "@nxext/sveltekit:sveltekit",
+      "options": {
+        "command": "preview"
+      },
+      "dependsOn": [
+        {
+          "target": "build",
+          "projects": "self"
+        }
+      ]
+    },
+    "add": {
+      "executor": "@nxext/sveltekit:add"
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["apps/sveltekit/**/*.{ts,svelte,spec.ts}"],
+        "ignorePath": "apps/sveltekit/.gitignore"
+      }
+    },
+    "check": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "svelte-check",
+        "cwd": "apps/sveltekit",
+        "tsconfig": "./tsconfig.app.json"
+      }
+    },
+    "test": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "playwright test",
+        "cwd": "apps/sveltekit"
+      },
+      "dependsOn": [
+        {
+          "target": "build",
+          "projects": "self"
+        }
+      ]
+    }
+  }
+}

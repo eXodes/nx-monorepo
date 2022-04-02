@@ -1,3 +1,16 @@
 {
-  "singleQuote": true
+  "singleQuote": false,
+  "arrowParens": "always",
+  "bracketSameLine": false,
+  "embeddedLanguageFormatting": "auto",
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "jsxSingleQuote": true,
+  "quoteProps": "consistent",
+  "tabWidth": 2,
+  "semi": true,
+  "useTabs": false,
+  "svelteSortOrder": "options-scripts-markup-styles",
+  "svelteAllowShorthand": false,
+  "svelteIndentScriptAndStyle": false
 }

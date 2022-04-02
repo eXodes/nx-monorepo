@@ -2,18 +2,38 @@
   "name": "nx-monorepo",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
   "private": true,
-  "dependencies": {},
+  "scripts": {
+    "serve": "nx run-many --target=serve --all",
+    "build": "nx run-many --target=build --all",
+    "test": "nx run-many --target=test --all"
+  },
   "devDependencies": {
-    "nx": "13.9.6",
+    "@angular-devkit/schematics": "^13.3.1",
     "@nrwl/cli": "13.9.6",
+    "@nrwl/eslint-plugin-nx": "13.9.6",
+    "@nrwl/linter": "13.9.6",
     "@nrwl/workspace": "13.9.6",
-    "@types/node": "16.11.7",
-    "typescript": "~4.5.2",
-    "prettier": "^2.5.1"
+    "@nxext/sveltekit": "^13.0.0-next.2",
+    "@playwright/test": "^1.21.0-alpha-apr-2-2022",
+    "@sveltejs/adapter-node": "next",
+    "@sveltejs/kit": "next",
+    "@types/node": "^17.0.23",
+    "@typescript-eslint/eslint-plugin": "^5.17.0",
+    "@typescript-eslint/parser": "^5.17.0",
+    "eslint": "^8.12.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-svelte3": "^3.1.2",
+    "nx": "13.9.6",
+    "prettier": "^2.6.2",
+    "prettier-plugin-svelte": "^2.6.0",
+    "svelte": "^3.44.0",
+    "svelte-check": "^2.4.6",
+    "svelte-preprocess": "^4.9.4",
+    "typescript": "^4.6.3"
   },
   "workspaces": [
+    "apps/**",
     "packages/**"
   ]
 }
