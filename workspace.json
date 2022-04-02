@@ -1,4 +1,7 @@
 {
   "version": 2,
-  "projects": {}
+  "projects": {
+    "complex": "packages/complex",
+    "simple": "packages/simple"
+  }
 }

@@ -1,0 +1,1 @@
+require('@nx-monorepo/simple')

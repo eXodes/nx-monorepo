@@ -1,0 +1,10 @@
+{
+  "name": "@nx-monorepo/complex",
+  "version": "0.0.0",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "dependencies": {
+    "@nx-monorepo/simple": "*"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "@nx-monorepo/simple",
+  "version": "0.0.0",
+  "scripts": {
+    "test": "node index.js"
+  }
+}
