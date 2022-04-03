@@ -2,6 +2,9 @@
   "name": "sveltekit",
   "version": "0.0.0",
   "type": "module",
+  "dependencies": {
+    "@nx-monorepo/ui-library": "*"
+  },
   "devDependencies": {
     "svelte": "svelte",
     "@playwright/test": "@playwright/test"

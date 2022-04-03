@@ -1,4 +1,6 @@
 <script lang="ts">
+import { Title } from "@nx-monorepo/ui-library";
+
 const appName = import.meta.env.DOM_APP_NAME;
 </script>
 
@@ -6,7 +8,7 @@ const appName = import.meta.env.DOM_APP_NAME;
   <title>{appName}</title>
 </svelte:head>
 
-<h1 class="text-lg font-bold">Welcome to {appName}</h1>
+<Title name="Welcome to {appName}" />
 <p>
   Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation
 </p>
