@@ -1,0 +1,30 @@
+{
+  "root": "packages/ui-library",
+  "sourceRoot": "packages/ui-library/src",
+  "projectType": "library",
+  "tags": ["scope:library"],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/ui-library/**/*.{ts,svelte,spec.ts}"]
+      }
+    },
+    "check": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "svelte-check",
+        "cwd": "packages/ui-library"
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/ui-library"],
+      "options": {
+        "jestConfig": "packages/ui-library/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

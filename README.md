@@ -17,6 +17,9 @@ Below are plugins used:
 - [SvelteKit](https://kit.svelte.dev)
   - `npm install --save-dev @nxext/sveltekit`
 
+- [Svelte](https://svelte.dev)
+  - `npm install --save-dev @nxext/svelte`
+
 There are also many [community plugins](https://nx.dev/community) you could add.
 
 ## Generate an application
@@ -28,15 +31,15 @@ When using Nx, you can create multiple applications and libraries in the same wo
 
 ## Generate a library
 
-Run `nx g @nrwl/react:lib my-lib` to generate a library.
+Run `nx g @nxext/svelte:library $lib-name` to generate a library.
 
-> You can also use any of the plugins above to generate libraries as well.
+Libraries are shareable across libraries and applications. They can be imported from `@nx-monorepo/$lib-name`.
 
-Libraries are shareable across libraries and applications. They can be imported from `@nx-monorepo/mylib`.
+Add a `package.json` file to the root of your library and duplicate the content of the `package.json` file of other library except for the name.
 
 ## Code scaffolding
 
-Run `nx g @nrwl/react:component my-component --project=my-app` to generate a new component.
+Run `nx g @nxext/svelte:component $component-name --project=$lib-name` to generate a new component.
 
 ## Development server
 

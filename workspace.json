@@ -3,6 +3,7 @@
   "projects": {
     "complex": "packages/complex",
     "simple": "packages/simple",
-    "sveltekit": "apps/sveltekit"
+    "sveltekit": "apps/sveltekit",
+    "ui-library": "packages/ui-library"
   }
 }

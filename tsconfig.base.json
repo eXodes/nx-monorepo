@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@nx-monorepo/svelte-library": ["packages/svelte-library/src/index.ts"],
+      "@nx-monorepo/ui-library": ["packages/ui-library/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
