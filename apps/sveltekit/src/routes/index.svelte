@@ -6,7 +6,7 @@ const appName = import.meta.env.DOM_APP_NAME;
   <title>{appName}</title>
 </svelte:head>
 
-<h1>Welcome to {appName}</h1>
+<h1 class="text-lg font-bold">Welcome to {appName}</h1>
 <p>
   Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation
 </p>

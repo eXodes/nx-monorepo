@@ -10,6 +10,9 @@ const config = {
   preprocess: [
     preprocess({
       sourceMap: !production,
+      postcss: {
+        configFilePath: resolve("../../postcss.config.cjs"),
+      },
       typescript: {
         tsconfigFile: resolve("./tsconfig.app.json"),
       },
