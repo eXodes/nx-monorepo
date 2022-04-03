@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link renders 1`] = `
+<body>
+  <div>
+    <a
+      class="hover:underline"
+      data-testid="link"
+      href="https://link.test"
+      target="_self"
+    />
+  </div>
+</body>
+`;

@@ -1,5 +1,5 @@
 <script lang="ts">
-import { Title } from "@nx-monorepo/ui-library";
+import { Link, Title } from "@nx-monorepo/ui-library";
 
 const appName = import.meta.env.DOM_APP_NAME;
 </script>
@@ -10,5 +10,5 @@ const appName = import.meta.env.DOM_APP_NAME;
 
 <Title name="Welcome to {appName}" />
 <p>
-  Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation
+  Visit <Link href="https://kit.svelte.dev">kit.svelte.dev</Link> to read the documentation
 </p>
