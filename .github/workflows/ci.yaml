@@ -11,13 +11,13 @@ jobs:
     if: ${{ github.event_name != 'pull_request' }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
       - name: Derive appropriate SHAs for base and head for `nx affected` commands
         uses: nrwl/nx-set-shas@v2
       - name: Setup node modules
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
       - name: Install dependencies
         run: npm install
       - name: Run affected build
@@ -29,14 +29,14 @@ jobs:
     if: ${{ github.event_name == 'pull_request' }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           ref: ${{ github.event.pull_request.head.ref }}
           fetch-depth: 0
       - name: Derive appropriate SHAs for base and head for `nx affected` commands
         uses: nrwl/nx-set-shas@v2
       - name: Setup node modules
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
       - name: Install dependencies
         run: npm install
       - name: Run affected build
