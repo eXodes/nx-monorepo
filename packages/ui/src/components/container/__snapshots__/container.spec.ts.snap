@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container renders 1`] = `
+<body>
+  <div>
+    <div
+      class="max-w-7xl mx-auto sm:px-6 lg:px-8 flex flex-col gap-3 items-center justify-center"
+    />
+  </div>
+</body>
+`;
