@@ -31,11 +31,17 @@ When using Nx, you can create multiple applications and libraries in the same wo
 
 ## Generate a library
 
-Run `nx g @nxext/svelte:library $lib-name` to generate a library.
-
 Libraries are shareable across libraries and applications. They can be imported from `@nx-monorepo/$lib-name`.
 
 Add a `package.json` file to the root of your library and duplicate the content of the `package.json` file of other library except for the name.
+
+### Component
+
+Run `nx g @nxext/svelte:library $lib-name` to generate a Svelte component library.
+
+### Function
+
+Run `nx g lib $lib-name` to generate a functional library.
 
 ## Code scaffolding
 
