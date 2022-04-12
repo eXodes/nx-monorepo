@@ -10,5 +10,9 @@ const appName = import.meta.env.DOM_APP_NAME;
 
 <Title name="Welcome to {appName}" />
 <p>
-  Visit <Link href="https://kit.svelte.dev">kit.svelte.dev</Link> to read the documentation
+  Visit
+  <Link href="https://kit.svelte.dev">kit.svelte.dev</Link>
+  and
+  <Link href="https://nx.dev/">nx.dev</Link>
+  to learn more.
 </p>
