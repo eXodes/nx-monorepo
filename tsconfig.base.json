@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-monorepo/ui": ["packages/ui/src/index.ts"]
+      "@nx-monorepo/ui": ["packages/ui/src/index.ts"],
+      "@nx-monorepo/utils": ["packages/utils/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

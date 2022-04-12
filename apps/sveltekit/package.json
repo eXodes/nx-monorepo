@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "type": "module",
   "dependencies": {
-    "@nx-monorepo/ui": "*"
+    "@nx-monorepo/ui": "*",
+    "@nx-monorepo/utils": "*"
   },
   "devDependencies": {
     "svelte": "../../node_modules/svelte/package.json",
