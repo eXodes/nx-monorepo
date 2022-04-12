@@ -5,7 +5,6 @@
     "noEmit": true,
     "outDir": "../../dist/out-tsc"
   },
-
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "svelte.config.js"],
   "exclude": ["node_modules/**", "**/*.spec.ts", "**/*_spec.ts"]
 }
