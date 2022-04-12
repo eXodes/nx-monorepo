@@ -4,10 +4,11 @@
   "type": "module",
   "dependencies": {
     "@nx-monorepo/ui": "*",
-    "@nx-monorepo/utils": "*"
+    "@nx-monorepo/utils": "*",
+    "svelte-hero-icons": "../../node_modules/svelte-hero-icons"
   },
   "devDependencies": {
-    "svelte": "../../node_modules/svelte/package.json",
-    "@playwright/test": "../../node_modules/@playwright/test/package.json"
+    "svelte": "../../node_modules/svelte",
+    "@playwright/test": "../../node_modules/@playwright/test"
   }
 }
