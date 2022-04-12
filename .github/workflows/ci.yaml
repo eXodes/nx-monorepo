@@ -20,7 +20,7 @@ jobs:
       - name: Setup node modules
         uses: actions/setup-node@v3
       - name: Install dependencies
-        run: npm install
+        run: npm install && npx playwright install-deps
       - name: Run affected build
         run: npx nx affected --target=build --parallel
       - name: Run affected test
@@ -39,7 +39,7 @@ jobs:
         uses: nrwl/nx-set-shas@v2
       - name: Setup node modules
         uses: actions/setup-node@v3
-      - name: Install dependencies
+      - name: Install dependencies && npx playwright install-deps
         run: npm install
       - name: Run affected build
         run: npx nx affected --target=build --parallel
