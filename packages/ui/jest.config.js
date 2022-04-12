@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: "ui-library",
+  displayName: "ui",
   preset: "../../jest.preset.js",
   globals: {
     "ts-jest": {
@@ -10,11 +10,11 @@ module.exports = {
     "^(.+\\.svelte$)": [
       "svelte-jester",
       {
-        preprocess: "packages/ui-library/svelte.config.cjs",
+        preprocess: "packages/ui/svelte.config.cjs",
       },
     ],
     "^.+\\.[tj]s$": "ts-jest",
   },
   moduleFileExtensions: ["svelte", "ts", "js", "html"],
-  coverageDirectory: "../../coverage/packages/ui-library",
+  coverageDirectory: "../../coverage/packages/ui",
 };

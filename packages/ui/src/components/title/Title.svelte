@@ -2,7 +2,7 @@
 export let name: string;
 </script>
 
-<h1 class="text-lg font-bold">
+<h1 class="text-xl font-bold">
   <slot>
     {name}
   </slot>

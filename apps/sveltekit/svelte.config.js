@@ -28,6 +28,12 @@ const config = {
     }),
     vite: {
       mode,
+      resolve: {
+        alias: {
+          "@nx-monorepo/ui": resolve("../../packages/ui/src/index.ts"),
+          "@nx-monorepo/utils": resolve("../../packages/utils/src/index.ts"),
+        },
+      },
       envPrefix: "DOM_",
     },
   },

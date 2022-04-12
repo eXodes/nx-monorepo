@@ -1,5 +1,5 @@
 <script lang="ts">
-import { Link, Title } from "@nx-monorepo/ui-library";
+import { Link, Title } from "@nx-monorepo/ui";
 
 const appName = import.meta.env.DOM_APP_NAME;
 </script>

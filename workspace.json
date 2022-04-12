@@ -4,6 +4,6 @@
     "complex": "packages/complex",
     "simple": "packages/simple",
     "sveltekit": "apps/sveltekit",
-    "ui-library": "packages/ui-library"
+    "ui": "packages/ui"
   }
 }

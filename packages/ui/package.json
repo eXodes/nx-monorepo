@@ -1,5 +1,5 @@
 {
-  "name": "@nx-monorepo/ui-library",
+  "name": "@nx-monorepo/ui",
   "version": "0.0.0",
   "main": "./src/index.ts"
 }

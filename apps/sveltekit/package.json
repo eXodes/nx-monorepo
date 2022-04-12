@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "type": "module",
   "dependencies": {
-    "@nx-monorepo/ui-library": "*"
+    "@nx-monorepo/ui": "*"
   },
   "devDependencies": {
-    "svelte": "svelte",
-    "@playwright/test": "@playwright/test"
+    "svelte": "../../node_modules/svelte/package.json",
+    "@playwright/test": "../../node_modules/@playwright/test/package.json"
   }
 }
