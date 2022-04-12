@@ -1,5 +1,6 @@
 <script lang="ts">
 import { Link, Title } from "@nx-monorepo/ui";
+import { CubeTransparent, Icon } from "svelte-hero-icons";
 
 const appName = import.meta.env.DOM_APP_NAME;
 </script>
@@ -8,11 +9,14 @@ const appName = import.meta.env.DOM_APP_NAME;
   <title>{appName}</title>
 </svelte:head>
 
+<div>
+  <Icon src={CubeTransparent} class="w-20 h-20 text-brand-400" />
+</div>
 <Title name="Welcome to {appName}" />
 <p>
   Visit
-  <Link href="https://kit.svelte.dev">kit.svelte.dev</Link>
+  <Link href="https://kit.svelte.dev" external={true}>kit.svelte.dev</Link>
   and
-  <Link href="https://nx.dev/">nx.dev</Link>
+  <Link href="https://nx.dev/" external={true}>nx.dev</Link>
   to learn more.
 </p>
