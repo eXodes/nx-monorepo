@@ -4,11 +4,13 @@ exports[`Link renders 1`] = `
 <body>
   <div>
     <a
-      class="text-brand-500 hover:text-brand-400 hover:underline"
+      class="inline-flex text-brand-500 hover:text-brand-400 hover:underline"
       data-testid="link"
       href="https://link.test"
       target="_self"
-    />
+    >
+       
+    </a>
   </div>
 </body>
 `;
