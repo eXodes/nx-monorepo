@@ -7,6 +7,7 @@ module.exports = {
     },
   },
   transform: {
+    "node_modules\\/.+\\.js$": "jest-esm-transformer",
     "^(.+\\.svelte$)": [
       "svelte-jester",
       {
@@ -15,6 +16,7 @@ module.exports = {
     ],
     "^.+\\.[tj]s$": "ts-jest",
   },
+  transformIgnorePatterns: [],
   moduleFileExtensions: ["svelte", "ts", "js", "html"],
   coverageDirectory: "../../coverage/packages/ui",
 };
