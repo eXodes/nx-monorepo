@@ -1,8 +1,8 @@
 {
   "root": "apps/sveltekit",
+  "sourceRoot": "apps/sveltekit/src",
   "projectType": "application",
   "tags": ["scope:app"],
-  "sourceRoot": "apps/sveltekit/src",
   "targets": {
     "sync": {
       "executor": "@nxext/sveltekit:sveltekit",
