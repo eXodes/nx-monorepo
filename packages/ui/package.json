@@ -1,5 +1,8 @@
 {
   "name": "@nx-monorepo/ui",
   "version": "0.0.0",
-  "main": "./src/index.ts"
+  "main": "./src/index.ts",
+  "dependencies": {
+    "@nx-monorepo/utils": "*"
+  }
 }
