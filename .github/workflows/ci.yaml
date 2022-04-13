@@ -30,12 +30,12 @@ jobs:
         run: npx nx run-many --target=build --all --parallel
       - name: Run affected test
         run: npx nx run-many --target=test --all --parallel
-      - name: Send test coverage
-        # uses: paambaati/codeclimate-action@v3.0.0
-        # env:
-        #   CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
-        # with:
-        #   coverageLocations: ${{github.workspace}}/coverage/*.lcov:lcov
+      # - name: Send test coverage
+      #   uses: paambaati/codeclimate-action@v3.0.0
+      #   env:
+      #     CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+      #   with:
+      #     coverageLocations: ${{github.workspace}}/coverage/*.lcov:lcov
 
   pr:
     name: Pull Request
