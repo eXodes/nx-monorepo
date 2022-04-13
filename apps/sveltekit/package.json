@@ -8,7 +8,7 @@
     "svelte-hero-icons": "../../node_modules/svelte-hero-icons"
   },
   "devDependencies": {
-    "svelte": "../../node_modules/svelte",
-    "@playwright/test": "../../node_modules/@playwright/test"
+    "@playwright/test": "../../node_modules/@playwright/test",
+    "svelte": "../../node_modules/svelte"
   }
 }

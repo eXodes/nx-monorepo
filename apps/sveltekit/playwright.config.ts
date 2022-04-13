@@ -6,6 +6,7 @@ const config: PlaywrightTestConfig = {
     cwd: "../../",
     port: 3000,
   },
+  reporter: process.env.CI ? "github" : "list",
 };
 
 export default config;
