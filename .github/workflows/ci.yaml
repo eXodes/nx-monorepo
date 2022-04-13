@@ -5,6 +5,9 @@ on:
       - main
   pull_request:
 
+env:
+  DOM_APP_NAME: 'Sveltekit with NX'
+
 jobs:
   main:
     name: Merged
