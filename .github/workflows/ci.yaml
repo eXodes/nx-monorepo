@@ -20,7 +20,9 @@ jobs:
       - name: Setup node modules
         uses: actions/setup-node@v3
       - name: Install dependencies
-        run: npm install && npx playwright install-deps
+        run: npm install
+      - name: Install Playwright
+        run: npx playwright install --with-deps
       - name: Run affected build
         run: npx nx run-many --target=build --all --parallel
       - name: Run affected test
