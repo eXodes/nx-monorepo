@@ -22,9 +22,9 @@ jobs:
       - name: Install dependencies
         run: npm install && npx playwright install-deps
       - name: Run affected build
-        run: npx nx affected --target=build --parallel
+        run: npx nx run-many --target=build --all --parallel
       - name: Run affected test
-        run: npx nx affected --target=test --parallel
+        run: npx nx run-many --target=test --all --parallel
   pr:
     name: Pull Request
     runs-on: ubuntu-latest
