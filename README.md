@@ -1,6 +1,6 @@
-
-
 # Nx Monorepo with Frameworks
+
+![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/eXodes/nx-monorepo/CI/main)
 
 This project was generated using [Nx](https://nx.dev).
 
@@ -15,6 +15,7 @@ These capabilities include generating applications, libraries, etc as well as th
 Below are plugins used:
 
 - [SvelteKit](https://kit.svelte.dev)
+
   - `npm install --save-dev @nxext/sveltekit`
 
 - [Svelte](https://svelte.dev)
@@ -25,7 +26,6 @@ There are also many [community plugins](https://nx.dev/community) you could add.
 ## Generate an application
 
 Run `nx g @nxext/sveltekit:application $app-name` to generate an application.
-
 
 When using Nx, you can create multiple applications and libraries in the same workspace.
 
@@ -53,7 +53,7 @@ Run `npm run serve` for a dev server. Navigate to http://localhost:3000/. The ap
 
 ## Build
 
-Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory. 
+Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 ## Running tests
 
