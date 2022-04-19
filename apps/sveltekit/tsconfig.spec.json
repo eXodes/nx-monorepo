@@ -6,5 +6,10 @@
     "module": "commonjs",
     "types": ["jest", "node"]
   },
-  "include": ["**/*.spec.ts", "**/*.spec.js", "**/*.d.ts"]
+  "include": [
+    "**/*.spec.ts",
+    "**/*.spec.js",
+    "**/*.d.ts",
+    "playwright.config.ts"
+  ]
 }
