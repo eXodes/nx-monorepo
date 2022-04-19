@@ -3,6 +3,7 @@ import { classNames } from "@nx-monorepo/utils";
 import { createEventDispatcher } from "svelte";
 import { Switch } from "@rgossiaux/svelte-headlessui";
 
+export let label: string;
 export let enabled = false;
 
 const dispatch = createEventDispatcher<{
@@ -21,7 +22,7 @@ const handleChange = (bool: boolean) => {
   class="bg-brand-400 focus:ring-brand-500 relative inline-flex h-8 w-16 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 dark:ring-offset-gray-900"
   data-testid="toggle"
 >
-  <span class="sr-only">Use setting</span>
+  <span class="sr-only">{label}</span>
   <span
     class={classNames(
       enabled ? "translate-x-7" : "translate-x-0",
