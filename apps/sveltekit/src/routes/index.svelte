@@ -2,7 +2,7 @@
 import { Link, Title } from "@nx-monorepo/ui";
 import { CubeTransparent, Icon } from "svelte-hero-icons";
 
-const appName = import.meta.env.DOM_APP_NAME;
+export let appName: string;
 </script>
 
 <svelte:head>
