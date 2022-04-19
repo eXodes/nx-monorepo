@@ -7,7 +7,7 @@ export let external = false;
 </script>
 
 <a
-  class="text-brand-500 hover:text-brand-400 inline-flex hover:underline"
+  class="text-brand-600 hover:text-brand-500 dark:text-brand-400 dark:hover:text-brand-500 inline-flex hover:underline"
   href={href}
   target={external ? "_blank" : target}
   data-testid="link"
