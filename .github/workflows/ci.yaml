@@ -26,8 +26,10 @@ jobs:
         run: npm install
       - name: Install Playwright
         run: npx playwright install --with-deps
-      - name: Run code check
+      - name: Run code format check
         run: npm run format:check
+      - name: Run Svelte type check
+        run: npm run check
       - name: Run lint
         run: npm run lint
       - name: Run build
@@ -60,8 +62,10 @@ jobs:
         uses: actions/setup-node@v3
       - name: Install dependencies && npx playwright install-deps
         run: npm install
-      - name: Run affected code check
+      - name: Run affected code format check
         run: npm run format:check:affected
+      - name: Run affected Svelte type check
+        run: npm run check:affected
       - name: Run affected lint
         run: npm run lint:affected
       - name: Run affected build
