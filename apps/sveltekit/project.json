@@ -64,7 +64,7 @@
         "tsconfig": "./tsconfig.app.json"
       }
     },
-    "test": {
+    "e2e": {
       "executor": "@nrwl/workspace:run-commands",
       "options": {
         "command": "playwright test",
