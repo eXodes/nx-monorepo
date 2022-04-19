@@ -2,6 +2,7 @@
   "root": "packages/store",
   "sourceRoot": "packages/store/src",
   "projectType": "library",
+  "tags": ["scope:library"],
   "targets": {
     "lint": {
       "executor": "@nrwl/linter:eslint",
@@ -19,6 +20,5 @@
         "coverageReporters": ["lcov"]
       }
     }
-  },
-  "tags": []
+  }
 }
