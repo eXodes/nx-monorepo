@@ -8,7 +8,7 @@ import { theme } from "@nx-monorepo/store";
 
 <main class={classNames($theme === "dark" && "dark")}>
   <div class="duration-100 motion-reduce:transition-none dark:bg-gray-900">
-    <Container class="min-h-screen" }>
+    <Container class="min-h-screen">
       <slot />
     </Container>
   </div>
