@@ -35,6 +35,9 @@ const config = {
           "@nx-monorepo/utils": resolve("../../packages/utils/src/index.ts"),
         },
       },
+      optimizeDeps: {
+        include: ["@nx-monorepo/ui"],
+      },
       envPrefix: "DOM_",
     },
   },
