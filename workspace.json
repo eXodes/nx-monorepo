@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "nest": "apps/nest",
     "store": "packages/store",
     "sveltekit": "apps/sveltekit",
     "ui": "packages/ui",
