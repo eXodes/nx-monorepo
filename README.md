@@ -19,9 +19,22 @@ Below are plugins used:
   - `npm install --save-dev @nxext/sveltekit`
 
 - [Svelte](https://svelte.dev)
+
   - `npm install --save-dev @nxext/svelte`
 
 There are also many [community plugins](https://nx.dev/community) you could add.
+
+### Dependencies
+
+Below are the dependencies comes preset with this repo.
+
+- [Svelte Heroicons](https://github.com/JustinVoitel/svelte-hero-icons)
+
+  - `npm install --save-dev svelte-hero-icons`
+
+- [Svelte HeadlessUI](https://github.com/rgossiaux/svelte-headlessui)
+
+  - `npm install --save-dev @rgossiaux/svelte-headlessui`
 
 ## Generate an application
 
