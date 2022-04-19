@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "common": "packages/common",
     "nest": "apps/nest",
     "store": "packages/store",
     "sveltekit": "apps/sveltekit",
