@@ -8,6 +8,7 @@ export let appName: string;
 
 <svelte:head>
   <title>{appName}</title>
+  <meta name="description" content="NX monorepo with SvelteKit and NestJS." />
 </svelte:head>
 
 <div class="flex flex-col items-center justify-center gap-3">
@@ -25,6 +26,7 @@ export let appName: string;
 
   <div class="mt-5">
     <Toggle
+      label="Toggle dark mode"
       enabled={$theme === "dark"}
       on:change={({ detail }) => theme.set(detail ? "dark" : "light")}
     >
