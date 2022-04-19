@@ -51,7 +51,8 @@
       "outputs": ["coverage/apps/nest"],
       "options": {
         "jestConfig": "apps/nest/jest.config.js",
-        "passWithNoTests": true
+        "passWithNoTests": true,
+        "coverageReporters": ["lcov"]
       }
     }
   }

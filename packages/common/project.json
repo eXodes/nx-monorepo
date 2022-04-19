@@ -15,7 +15,8 @@
       "outputs": ["coverage/packages/common"],
       "options": {
         "jestConfig": "packages/common/jest.config.js",
-        "passWithNoTests": true
+        "passWithNoTests": true,
+        "coverageReporters": ["lcov"]
       }
     }
   }
