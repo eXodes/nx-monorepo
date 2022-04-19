@@ -7,6 +7,8 @@
     "serve": "nx run-many --target=serve --all --parallel",
     "build": "nx run-many --target=build --all --parallel",
     "build:affected": "nx affected --target=build --parallel",
+    "check": "nx run-many --target=check --all --parallel",
+    "check:affected": "nx affected --target=check --parallel",
     "lint": "nx run-many --target=lint --all --parallel",
     "lint:affected": "nx affected --target=lint --parallel",
     "test": "nx run-many --target=test --all --parallel",
