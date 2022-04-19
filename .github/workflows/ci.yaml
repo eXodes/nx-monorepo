@@ -32,6 +32,13 @@ jobs:
         run: npx nx run-many --target=test --all --parallel
       - name: Run affected e2e
         run: npx nx run-many --target=e2e --all --parallel
+      - name: Send test coverage
+        uses: paambaati/codeclimate-action@v3.0.0
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+        with:
+          coverageCommand: npx nx run-many --target=test --all --parallel --coverage
+          coverageLocations: ${{github.workspace}}/coverage/**/*/lcov.info:lcov
 
   pr:
     name: Pull Request
