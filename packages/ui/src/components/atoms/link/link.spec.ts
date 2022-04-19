@@ -12,6 +12,17 @@ describe("Link", () => {
     expect(container).toMatchSnapshot();
   });
 
+  it("renders with external icon", () => {
+    const { container } = render(Link, {
+      props: {
+        href: "https://link.test",
+        external: true,
+      },
+    });
+
+    expect(container).toMatchSnapshot();
+  });
+
   it("should have href props defined", async () => {
     const { getByTestId } = render(Link, {
       props: {
@@ -22,5 +33,18 @@ describe("Link", () => {
     const component = getByTestId("link");
 
     expect(component.getAttribute("href")).toContain("https://link.test");
+  });
+
+  it("should open external link in a new tab", async () => {
+    const { getByTestId } = render(Link, {
+      props: {
+        href: "https://link.test",
+        external: true,
+      },
+    });
+
+    const component = getByTestId("link");
+
+    expect(component.getAttribute("target")).toContain("_blank");
   });
 });

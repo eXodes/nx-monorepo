@@ -14,3 +14,39 @@ exports[`Link renders 1`] = `
   </div>
 </body>
 `;
+
+exports[`Link renders with external icon 1`] = `
+<body>
+  <div>
+    <a
+      class="text-brand-500 hover:text-brand-400 inline-flex hover:underline"
+      data-testid="link"
+      href="https://link.test"
+      target="_blank"
+    >
+       
+      <span
+        class="my-auto ml-0.5 inline"
+      >
+        <svg
+          aria-hidden="true"
+          class="h-4 w-4"
+          fill="none"
+          height="100%"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          width="100%"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+        </svg>
+      </span>
+    </a>
+  </div>
+</body>
+`;
