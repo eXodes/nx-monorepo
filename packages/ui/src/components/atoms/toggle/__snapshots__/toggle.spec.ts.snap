@@ -15,7 +15,7 @@ exports[`Toggle renders 1`] = `
       <span
         class="sr-only"
       >
-        Use setting
+        Toggle
       </span>
        
       <span
@@ -29,6 +29,45 @@ exports[`Toggle renders 1`] = `
         <span
           aria-hidden="true"
           class="opacity-0 ease-out duration-100 absolute inset-0 h-full w-full flex items-center justify-center transition-opacity"
+        />
+      </span>
+    </button>
+    
+    
+    
+  </div>
+</body>
+`;
+
+exports[`Toggle renders with checked props 'true' 1`] = `
+<body>
+  <div>
+    <button
+      aria-checked="true"
+      class="bg-brand-400 focus:ring-brand-500 relative inline-flex h-8 w-16 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 dark:ring-offset-gray-900"
+      data-testid="toggle"
+      id="headlessui-switch-2"
+      role="switch"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        class="sr-only"
+      >
+        Toggle
+      </span>
+       
+      <span
+        class="translate-x-7 pointer-events-none relative inline-block h-7 w-8 rounded-full bg-white dark:bg-gray-900 shadow transform ring-0 transition ease-in-out duration-200"
+      >
+        <span
+          aria-hidden="true"
+          class="opacity-0 ease-out duration-100 absolute inset-0 h-full w-full flex items-center justify-center transition-opacity"
+        />
+         
+        <span
+          aria-hidden="true"
+          class="opacity-100 ease-in duration-200 absolute inset-0 h-full w-full flex items-center justify-center transition-opacity"
         />
       </span>
     </button>
