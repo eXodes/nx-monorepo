@@ -18,7 +18,7 @@
     "e2e:affected": "nx affected --target=e2e --all",
     "e2e:nest": "start-server-and-test 'nx run nest:build && node dist/apps/nest/main.js' 3333/api e2e",
     "e2e:nest:affected": "start-server-and-test 'nx run nest:build && node dist/apps/nest/main.js' 3333/api e2e:affected",
-    "format": "nx format",
+    "format": "nx format --all",
     "format:check": "nx format:check --all",
     "format:check:affected": "nx format:check",
     "update": "nx migrate latest",
