@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "type": "module",
   "dependencies": {
+    "@nx-monorepo/store": "*",
     "@nx-monorepo/ui": "*",
     "@nx-monorepo/utils": "*",
     "svelte-hero-icons": "../../node_modules/svelte-hero-icons"

@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "store": "packages/store",
     "sveltekit": "apps/sveltekit",
     "ui": "packages/ui",
     "utils": "packages/utils"
