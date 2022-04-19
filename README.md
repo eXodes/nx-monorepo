@@ -8,6 +8,20 @@
 
 This project was generated using [Nx](https://nx.dev).
 
+### Features
+
+- [SvelteKit](https://kit.svelte.dev) as the frontend framework
+- [NestJS](https://nestjs.com) as the backend framework
+- [Jest](https://jestjs.io) as the unit testing framework
+- [Playwright](https://www.playwright.io) as the e2e testing framework
+- [TypeScript](https://www.typescriptlang.org) as the programming language
+- [ESLint](https://eslint.org) as the code style checker
+- [Prettier](https://prettier.io) as the code formatter
+- [PostCSS](https://postcss.org) as the CSS preprocessor
+- [TailwindCSS](https://tailwindcss.com) as the CSS framework
+- [Svelte HeadlessUI](https://github.com/rgossiaux/svelte-headlessui) as the UI library
+- [Svelte Heroicons](https://github.com/JustinVoitel/svelte-hero-icons) as the icon library
+
 🔎 **Smart, Fast and Extensible Build System**
 
 ## Adding capabilities to your workspace
@@ -32,31 +46,21 @@ Below are plugins used:
 
 There are also many [community plugins](https://nx.dev/community) you could add.
 
-### Dependencies
-
-Below are the dependencies comes preset with this repo.
-
-- [Svelte Heroicons](https://github.com/JustinVoitel/svelte-hero-icons)
-
-  - `npm install --save-dev svelte-hero-icons`
-
-- [Svelte HeadlessUI](https://github.com/rgossiaux/svelte-headlessui)
-
-  - `npm install --save-dev @rgossiaux/svelte-headlessui`
-
 ## Generate an application
 
 When using Nx, you can create multiple applications and libraries in the same workspace.
 
 ### SvelteKit
 
-Run `nx g @nxext/sveltekit:application $app-name` to generate an application.
+Run `nx g @nxext/sveltekit:application $app-name` to generate a SvelteKit application.
 
 ### Nest
 
-Run `nx g @nrwl/nest:app $app-name` to generate an application.
+Run `nx g @nrwl/nest:app $app-name` to generate a Nest application.
 
 ## Generate a library
+
+Due to issue [SvelteKit](https://github.com/sveltejs/kit/issues/2973) library, we are not able to generate a library.
 
 Libraries are shareable across libraries and applications. They can be imported from `@nx-monorepo/$lib-name`.
 
