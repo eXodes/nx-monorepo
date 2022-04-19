@@ -18,14 +18,14 @@ const handleChange = (bool: boolean) => {
 <Switch
   checked={enabled}
   on:change={(e) => handleChange(e.detail)}
-  class="bg-brand-400 focus:ring-brand-500 relative inline-flex h-9 w-16 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 dark:ring-offset-gray-900"
+  class="bg-brand-400 focus:ring-brand-500 relative inline-flex h-8 w-16 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 dark:ring-offset-gray-900"
   data-testid="toggle"
 >
   <span class="sr-only">Use setting</span>
   <span
     class={classNames(
       enabled ? "translate-x-7" : "translate-x-0",
-      "pointer-events-none relative inline-block h-8 w-8 rounded-full bg-white dark:bg-gray-900 shadow transform ring-0 transition ease-in-out duration-200"
+      "pointer-events-none relative inline-block h-7 w-8 rounded-full bg-white dark:bg-gray-900 shadow transform ring-0 transition ease-in-out duration-200"
     )}
   >
     <span
