@@ -23,6 +23,7 @@
     "@nxext/svelte": "^13.3.0",
     "@nxext/sveltekit": "^13.0.0-next.2",
     "@playwright/test": "^1.21.0-alpha-apr-2-2022",
+    "@rgossiaux/svelte-headlessui": "^1.0.0-beta.12",
     "@sveltejs/adapter-node": "next",
     "@sveltejs/kit": "next",
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.37",
