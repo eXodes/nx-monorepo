@@ -4,7 +4,7 @@ exports[`Title renders 1`] = `
 <body>
   <div>
     <h1
-      class="text-xl font-bold"
+      class="text-xl font-bold dark:text-gray-50"
     >
       Title Name
     </h1>
