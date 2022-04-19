@@ -16,7 +16,8 @@ export let appName: string;
   <Title name="Welcome to {appName}" />
   <p class="text-gray-800 dark:text-gray-200">
     Visit
-    <Link href="https://kit.svelte.dev" external={true}>kit.svelte.dev</Link>
+    <Link href="https://kit.svelte.dev" external={true}>kit.svelte.dev</Link>,
+    <Link href="https://nestjs.com" external={true}>nestjs.com</Link>
     and
     <Link href="https://nx.dev/" external={true}>nx.dev</Link>
     to learn more.
