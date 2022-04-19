@@ -60,11 +60,9 @@ Run `nx g @nrwl/nest:app $app-name` to generate a Nest application.
 
 ## Generate a library
 
-Due to issue [SvelteKit](https://github.com/sveltejs/kit/issues/2973) library, we are not able to generate a library.
-
 Libraries are shareable across libraries and applications. They can be imported from `@nx-monorepo/$lib-name`.
 
-Add a `package.json` file to the root of your library and duplicate the content of the `package.json` file of other library except for the name.
+> Due to issue [sveltejs/kit#2973](https://github.com/sveltejs/kit/issues/2973), you will need to add a `package.json` file to the root of your library that SvelteKit want to import. You may duplicate the content of the `package.json` file of other library and change the name.
 
 ### Svelte Component
 
