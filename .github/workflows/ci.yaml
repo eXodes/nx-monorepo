@@ -26,18 +26,18 @@ jobs:
         run: npm install
       - name: Install Playwright
         run: npx playwright install --with-deps
-      - name: Run affected build
-        run: npx nx run-many --target=build --all --parallel
-      - name: Run affected test
-        run: npx nx run-many --target=test --all --parallel
-      - name: Run affected e2e
-        run: npx nx run-many --target=e2e --all --parallel
+      - name: Run build
+        run: npm run build
+      - name: Run test
+        run: npm run test
+      - name: Run e2e
+        run: npm run e2e:nest
       - name: Send test coverage
         uses: paambaati/codeclimate-action@v3.0.0
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
         with:
-          coverageCommand: npx nx run-many --target=test --all --parallel --coverage
+          coverageCommand: npm run test:coverage
           coverageLocations: ${{github.workspace}}/coverage/**/*/lcov.info:lcov
 
   pr:
@@ -57,8 +57,8 @@ jobs:
       - name: Install dependencies && npx playwright install-deps
         run: npm install
       - name: Run affected build
-        run: npx nx affected --target=build --parallel
+        run: npm run build:affected
       - name: Run affected test
-        run: npx nx affected --target=test --parallel
+        run: npm run test:affected
       - name: Run affected e2e
-        run: npx nx run-many --target=e2e --all --parallel
+        run: npm run e2e:nest:affected
