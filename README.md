@@ -1,9 +1,10 @@
 # Nx Monorepo with Frameworks
 
-![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/eXodes/nx-monorepo/CI/main)
+[![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/eXodes/nx-monorepo/CI/main)](https://github.com/eXodes/nx-monorepo/actions)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/eXodes/nx-monorepo.svg)](https://lgtm.com/projects/g/eXodes/nx-monorepo/context:javascript)
-![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/eXodes/nx-monorepo)
-![Code Climate coverage](https://img.shields.io/codeclimate/coverage/eXodes/nx-monorepo)
+[![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/eXodes/nx-monorepo)](https://codeclimate.com/github/eXodes/nx-monorepo)
+[![Code Climate coverage](https://img.shields.io/codeclimate/coverage/eXodes/nx-monorepo)
+](https://codeclimate.com/github/eXodes/nx-monorepo)
 
 This project was generated using [Nx](https://nx.dev).
 
