@@ -22,7 +22,11 @@
     "format:check": "nx format:check --all",
     "format:check:affected": "nx format:check",
     "update": "nx migrate latest",
-    "migrate": "nx migrate --run-migrations"
+    "migrate": "nx migrate --run-migrations",
+    "version": "nx run-many --target=version --all",
+    "version:affected": "nx affected --target=version",
+    "version:alpha": "nx run-many --target=version --all --releaseAs=prerelease --preid=alpha",
+    "version:alpha:affected": "nx affected --target=version --releaseAs=prerelease --preid=alpha"
   },
   "devDependencies": {
     "@angular-devkit/schematics": "^13.3.3",
