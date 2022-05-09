@@ -3,8 +3,8 @@ on:
   - workflow_dispatch
 
 jobs:
-  release:
-    name: Release
+  release-alpha:
+    name: Release [Alpha]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -20,8 +20,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Run last-release version bump
-        shell: bash
-        run: nx affected --base=last-release --target=version
+        run: npm run version:alpha:affected
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Tag last-release
