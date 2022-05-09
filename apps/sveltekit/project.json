@@ -83,7 +83,8 @@
         "preset": "conventional",
         "commitMessageFormat": "release(${projectName}): bump to ${version} [skip ci]",
         "tagPrefix": "${projectName}@v",
-        "trackDeps": true
+        "trackDeps": true,
+        "postTargets": ["sveltekit:github"]
       }
     },
     "github": {
