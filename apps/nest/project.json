@@ -8,10 +8,11 @@
       "executor": "@nrwl/node:webpack",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/nest",
-        "main": "apps/nest/src/main.ts",
         "tsConfig": "apps/nest/tsconfig.app.json",
-        "assets": ["apps/nest/src/assets"]
+        "main": "apps/nest/src/main.ts",
+        "assets": ["apps/nest/src/assets"],
+        "outputPath": "dist/apps/nest",
+        "outputFileName": "index.js"
       },
       "configurations": {
         "production": {
@@ -70,6 +71,40 @@
       "options": {
         "tag": "${tag}",
         "notes": "${notes}"
+      }
+    },
+    "docker-alpha": {
+      "executor": "@nx-tools/nx-docker:build",
+      "options": {
+        "tags": ["nx-monorepo/nest:alpha"],
+        "context": ".",
+        "target": "serve"
+      }
+    },
+    "docker-alpha-push": {
+      "executor": "@nx-tools/nx-docker:build",
+      "options": {
+        "push": true,
+        "tags": ["nx-monorepo/nest:alpha", "nx-monorepo/nest:${tag}"],
+        "context": ".",
+        "target": "serve"
+      }
+    },
+    "docker": {
+      "executor": "@nx-tools/nx-docker:build",
+      "options": {
+        "tags": ["nx-monorepo/nest:latest"],
+        "context": ".",
+        "target": "serve"
+      }
+    },
+    "docker-push": {
+      "executor": "@nx-tools/nx-docker:build",
+      "options": {
+        "push": true,
+        "tags": ["nx-monorepo/nest:latest", "nx-monorepo/nest:${tag}"],
+        "context": ".",
+        "target": "serve"
       }
     }
   }
