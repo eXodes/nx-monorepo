@@ -26,7 +26,15 @@
     "version": "nx run-many --target=version --all",
     "version:affected": "nx affected --target=version",
     "version:alpha": "nx run-many --target=version --all --releaseAs=prerelease --preid=alpha",
-    "version:alpha:affected": "nx affected --target=version --releaseAs=prerelease --preid=alpha"
+    "version:alpha:affected": "nx affected --target=version --releaseAs=prerelease --preid=alpha",
+    "docker:start": "docker-compose up",
+    "docker:build": "docker-compose build",
+    "docker:stop": "docker-compose stop",
+    "docker:down": "docker-compose down",
+    "deploy:alpha": "nx run-many --target=docker-alpha --all --parallel",
+    "deploy:alpha:push": "nx run-many --target=docker-alpha-push --all --parallel",
+    "deploy:latest": "nx run-many --target=docker --all --parallel",
+    "deploy:latest:push": "nx run-many --target=docker-push --all --parallel"
   },
   "devDependencies": {
     "@angular-devkit/schematics": "^13.3.3",
