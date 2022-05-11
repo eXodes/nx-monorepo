@@ -25,7 +25,7 @@
     "serve": {
       "executor": "@nxext/sveltekit:sveltekit",
       "options": {
-        "command": "dev"
+        "command": "dev --host"
       },
       "dependsOn": [
         {
@@ -92,6 +92,39 @@
       "options": {
         "tag": "${tag}",
         "notes": "${notes}"
+      }
+    },
+    "docker-alpha": {
+      "executor": "@nx-tools/nx-docker:build",
+      "options": {
+        "tags": ["nx-monorepo/sveltekit:alpha"],
+        "target": "serve"
+      }
+    },
+    "docker-alpha-push": {
+      "executor": "@nx-tools/nx-docker:build",
+      "options": {
+        "push": true,
+        "tags": ["nx-monorepo/sveltekit:alpha", "nx-monorepo/sveltekit:${tag}"],
+        "target": "serve"
+      }
+    },
+    "docker": {
+      "executor": "@nx-tools/nx-docker:build",
+      "options": {
+        "tags": ["nx-monorepo/sveltekit:latest"],
+        "target": "serve"
+      }
+    },
+    "docker-push": {
+      "executor": "@nx-tools/nx-docker:build",
+      "options": {
+        "push": true,
+        "tags": [
+          "nx-monorepo/sveltekit:latest",
+          "nx-monorepo/sveltekit:${tag}"
+        ],
+        "target": "serve"
       }
     }
   }
