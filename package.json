@@ -43,6 +43,7 @@
     "@nrwl/nest": "13.10.3",
     "@nrwl/node": "13.10.3",
     "@nrwl/workspace": "13.10.3",
+    "@nx-tools/nx-docker": "^2.3.0",
     "@nxext/svelte": "^13.3.0",
     "@nxext/sveltekit": "^13.0.0-next.2",
     "@playwright/test": "^1.21.1",
