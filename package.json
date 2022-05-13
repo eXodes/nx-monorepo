@@ -33,8 +33,10 @@
     "docker:down": "docker-compose down",
     "deploy:alpha": "nx run-many --target=docker-alpha --all --parallel",
     "deploy:alpha:push": "nx run-many --target=docker-alpha-push --all --parallel",
+    "deploy:alpha:preview": "docker-compose -f docker-compose.alpha.yml up",
     "deploy:latest": "nx run-many --target=docker --all --parallel",
-    "deploy:latest:push": "nx run-many --target=docker-push --all --parallel"
+    "deploy:latest:push": "nx run-many --target=docker-push --all --parallel",
+    "deploy:latest:preview": "docker-compose -f docker-compose.latest.yml up"
   },
   "devDependencies": {
     "@angular-devkit/schematics": "^13.3.3",
