@@ -19,11 +19,11 @@ jobs:
           git config user.email "${{ github.actor }}@users.noreply.github.com"
       - name: Install dependencies
         run: npm install
-      - name: Run last-release version bump
+      - name: Run version bump
         run: npm run version:alpha:affected
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Tag last-release
+      - name: Tag version bump
         shell: bash
         run: git tag -f last-release
       - name: Push changes
