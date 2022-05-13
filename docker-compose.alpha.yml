@@ -28,47 +28,22 @@ services:
       - nx-network
 
   nest:
-    image: nest:dev
+    image: nx-monorepo/nest:alpha
     container_name: nest
-    build:
-      dockerfile: apps/nest/Dockerfile
-      context: .
-      target: dev
     ports:
       - "3333:3333"
     restart: unless-stopped
-    volumes:
-      - ./:/home
-      - nx-node:/home/node_modules
     networks:
       - nx-network
-    depends_on:
-      - postgres
-      - redis
 
   sveltekit:
-    image: sveltekit:dev
+    image: nx-monorepo/sveltekit:alpha
     container_name: sveltekit
-    build:
-      dockerfile: apps/sveltekit/Dockerfile
-      context: .
-      target: dev
     ports:
       - "3000:3000"
-    environment:
-      ORIGIN: localhost:3000
-      APP_NAME: NX-powered Applications
-      API_URL: http://nest:3333/api
     restart: unless-stopped
-    volumes:
-      - ./:/home
-      - nx-node:/home/node_modules
     networks:
       - nx-network
-    depends_on:
-      - postgres
-      - redis
-      - nest
 
 networks:
   nx-network:
