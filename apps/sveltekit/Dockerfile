@@ -22,9 +22,9 @@ COPY . .
 
 RUN npm install
 
-RUN npx nx run sveltekit:build
+ENV APP_NAME "NX-powered Applications"
 
-RUN npm ci --production
+RUN npx nx run sveltekit:build
 
 FROM node:alpine AS serve
 
@@ -33,8 +33,7 @@ USER node:node
 WORKDIR /home/apps/sveltekit
 
 COPY --from=build --chown=node:node /home/dist/apps/sveltekit ./build
-COPY --from=build --chown=node:node /home/node_modules ./node_modules
-COPY --chown=node ./apps/sveltekit/package.json .
+COPY --chown=node:node ./apps/sveltekit/package.json .
 
 ENV PORT 3000
 EXPOSE 3000
