@@ -6,7 +6,7 @@ on:
   pull_request:
 
 env:
-  APP_NAME: "Sveltekit with NX"
+  APP_NAME: "NX-powered Applications"
 
 jobs:
   main:
