@@ -21,8 +21,9 @@ This project was generated using [Nx](https://nx.dev).
 - [TailwindCSS](https://tailwindcss.com) as the CSS framework
 - [Svelte HeadlessUI](https://github.com/rgossiaux/svelte-headlessui) as the UI library
 - [Svelte Heroicons](https://github.com/JustinVoitel/svelte-hero-icons) as the icon library
-- [Docker](https://www.docker.com/) for containerization
-- [SemVer](https://semver.org/) for release versioning
+- [Docker](https://www.docker.com) for containerization
+- [SemVer](https://semver.org) for release versioning
+- [Code Climate](https://codeclimate.com) for code coverage report
 
 🔎 **Smart, Fast and Extensible Build System**
 
