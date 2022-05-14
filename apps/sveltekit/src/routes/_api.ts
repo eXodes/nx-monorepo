@@ -1,4 +1,4 @@
-const base = process.env.API_URL ?? "http://nest:3333/api";
+const base = process.env.API_URL ?? "http://localhost:3333/api";
 
 export const api = async <T extends Record<string, unknown>>(
   resource = "",
