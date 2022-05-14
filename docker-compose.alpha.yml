@@ -32,6 +32,8 @@ services:
     container_name: nest
     ports:
       - "3333:3333"
+    environment:
+      APP_NAME: NX-powered Applications
     restart: unless-stopped
     networks:
       - nx-network
@@ -41,6 +43,8 @@ services:
     container_name: sveltekit
     ports:
       - "3000:3000"
+    environment:
+      API_URL: http://nest:3333/api
     restart: unless-stopped
     networks:
       - nx-network

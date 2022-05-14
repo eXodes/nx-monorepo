@@ -36,6 +36,8 @@ services:
       target: dev
     ports:
       - "3333:3333"
+    environment:
+      APP_NAME: NX-powered Applications
     restart: unless-stopped
     volumes:
       - ./:/home
@@ -57,7 +59,6 @@ services:
       - "3000:3000"
     environment:
       ORIGIN: localhost:3000
-      APP_NAME: NX-powered Applications
       API_URL: http://nest:3333/api
     restart: unless-stopped
     volumes:
