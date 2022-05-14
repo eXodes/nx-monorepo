@@ -6,7 +6,7 @@ on:
   pull_request:
 
 env:
-  DOM_APP_NAME: "Sveltekit with NX"
+  APP_NAME: "Sveltekit with NX"
 
 jobs:
   main:
