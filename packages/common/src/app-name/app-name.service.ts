@@ -4,7 +4,7 @@ import { Injectable } from "@nestjs/common";
 export class AppNameService {
   get(): { app_name: string } {
     return {
-      app_name: "NX-powered Applications",
+      app_name: process.env.APP_NAME,
     };
   }
 }
