@@ -22,8 +22,6 @@ COPY . .
 
 RUN npm install
 
-ENV APP_NAME "NX-powered Applications"
-
 RUN npx nx run sveltekit:build
 
 FROM node:alpine AS serve
