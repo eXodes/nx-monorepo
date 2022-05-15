@@ -1,6 +1,6 @@
 {
-  "root": "apps/sveltekit",
-  "sourceRoot": "apps/sveltekit/src",
+  "root": "apps/frontend",
+  "sourceRoot": "apps/frontend/src",
   "projectType": "application",
   "tags": ["scope:app"],
   "targets": {
@@ -52,15 +52,15 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": ["apps/sveltekit/**/*.{ts,svelte,spec.ts}"],
-        "ignorePath": "apps/sveltekit/.gitignore"
+        "lintFilePatterns": ["apps/frontend/**/*.{ts,svelte,spec.ts}"],
+        "ignorePath": "apps/frontend/.gitignore"
       }
     },
     "check": {
       "executor": "@nrwl/workspace:run-commands",
       "options": {
         "command": "svelte-check",
-        "cwd": "apps/sveltekit",
+        "cwd": "apps/frontend",
         "tsconfig": "./tsconfig.app.json"
       }
     },
@@ -68,7 +68,7 @@
       "executor": "@nrwl/workspace:run-commands",
       "options": {
         "command": "playwright test",
-        "cwd": "apps/sveltekit"
+        "cwd": "apps/frontend"
       },
       "dependsOn": [
         {
@@ -84,7 +84,7 @@
         "commitMessageFormat": "release(${projectName}): bump to ${version} [skip ci]",
         "tagPrefix": "${projectName}@v",
         "trackDeps": true,
-        "postTargets": ["sveltekit:github"]
+        "postTargets": ["frontend:github"]
       }
     },
     "github": {
@@ -97,7 +97,7 @@
     "docker-alpha": {
       "executor": "@nx-tools/nx-docker:build",
       "options": {
-        "tags": ["nx-monorepo/sveltekit:alpha"],
+        "tags": ["nx-monorepo/frontend:alpha"],
         "target": "serve"
       }
     },
@@ -105,14 +105,14 @@
       "executor": "@nx-tools/nx-docker:build",
       "options": {
         "push": true,
-        "tags": ["nx-monorepo/sveltekit:alpha", "nx-monorepo/sveltekit:${tag}"],
+        "tags": ["nx-monorepo/frontend:alpha", "nx-monorepo/frontend:${tag}"],
         "target": "serve"
       }
     },
     "docker": {
       "executor": "@nx-tools/nx-docker:build",
       "options": {
-        "tags": ["nx-monorepo/sveltekit:latest"],
+        "tags": ["nx-monorepo/frontend:latest"],
         "target": "serve"
       }
     },
@@ -120,10 +120,7 @@
       "executor": "@nx-tools/nx-docker:build",
       "options": {
         "push": true,
-        "tags": [
-          "nx-monorepo/sveltekit:latest",
-          "nx-monorepo/sveltekit:${tag}"
-        ],
+        "tags": ["nx-monorepo/frontend:latest", "nx-monorepo/frontend:${tag}"],
         "target": "serve"
       }
     }

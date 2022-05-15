@@ -12,7 +12,7 @@ module.exports = {
     {
       files: ["*.ts", "*.js", "*.svelte"],
       parserOptions: {
-        project: ["apps/sveltekit/tsconfig.*?.json"],
+        project: ["apps/frontend/tsconfig.*?.json"],
       },
       rules: {},
     },

@@ -24,7 +24,7 @@ const config = {
   },
   kit: {
     adapter: node({
-      out: "../../dist/apps/sveltekit",
+      out: "../../dist/apps/frontend",
     }),
     vite: {
       mode,

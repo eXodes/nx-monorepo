@@ -1,5 +1,5 @@
 {
-  "name": "@nx-monorepo/sveltekit",
+  "name": "@nx-monorepo/frontend",
   "version": "0.0.0",
   "type": "module",
   "dependencies": {
