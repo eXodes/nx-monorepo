@@ -16,8 +16,8 @@
     "test:coverage": "nx affected --target=test --all --parallel --coverage",
     "e2e": "nx run-many --target=e2e --all",
     "e2e:affected": "nx affected --target=e2e --all",
-    "e2e:nest": "start-server-and-test 'nx run nest:build && node dist/apps/nest/index.js' 3333/api e2e",
-    "e2e:nest:affected": "start-server-and-test 'nx run nest:build && node dist/apps/nest/index.js' 3333/api e2e:affected",
+    "e2e:backend": "start-server-and-test 'nx run backend:build && node dist/apps/backend/index.js' 3333/api e2e",
+    "e2e:backend:affected": "start-server-and-test 'nx run backend:build && node dist/apps/backend/index.js' 3333/api e2e:affected",
     "format": "nx format --all",
     "format:check": "nx format:check --all",
     "format:check:affected": "nx format:check",
@@ -91,10 +91,6 @@
     "typescript": "^4.6.3",
     "vitest": "^0.9.3"
   },
-  "workspaces": [
-    "apps/**",
-    "packages/**"
-  ],
   "dependencies": {
     "@nestjs/common": "^8.0.0",
     "@nestjs/core": "^8.0.0",
@@ -103,5 +99,9 @@
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.0.0",
     "tslib": "^2.0.0"
-  }
+  },
+  "workspaces": [
+    "apps/**",
+    "packages/**"
+  ]
 }

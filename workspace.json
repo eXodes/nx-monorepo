@@ -2,9 +2,9 @@
   "version": 2,
   "projects": {
     "common": "packages/common",
-    "nest": "apps/nest",
+    "backend": "apps/backend",
     "store": "packages/store",
-    "sveltekit": "apps/sveltekit",
+    "frontend": "apps/frontend",
     "ui": "packages/ui",
     "utils": "packages/utils"
   }

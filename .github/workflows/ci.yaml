@@ -37,7 +37,7 @@ jobs:
       - name: Run test
         run: npm run test
       - name: Run e2e
-        run: npm run e2e:nest
+        run: npm run e2e:backend
       - name: Send test coverage
         uses: paambaati/codeclimate-action@v3.0.0
         env:
@@ -73,4 +73,4 @@ jobs:
       - name: Run affected test
         run: npm run test:affected
       - name: Run affected e2e
-        run: npm run e2e:nest:affected
+        run: npm run e2e:backend:affected

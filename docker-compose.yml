@@ -27,11 +27,11 @@ services:
     networks:
       - nx-network
 
-  nest:
-    image: nest:dev
-    container_name: nest
+  backend:
+    image: backend:dev
+    container_name: backend
     build:
-      dockerfile: apps/nest/Dockerfile
+      dockerfile: apps/backend/Dockerfile
       context: .
       target: dev
     ports:
@@ -48,18 +48,18 @@ services:
       - postgres
       - redis
 
-  sveltekit:
-    image: sveltekit:dev
-    container_name: sveltekit
+  frontend:
+    image: frontend:dev
+    container_name: frontend
     build:
-      dockerfile: apps/sveltekit/Dockerfile
+      dockerfile: apps/frontend/Dockerfile
       context: .
       target: dev
     ports:
       - "3000:3000"
     environment:
       ORIGIN: localhost:3000
-      API_URL: http://nest:3333/api
+      API_URL: http://backend:3333/api
     restart: unless-stopped
     volumes:
       - ./:/home
@@ -69,7 +69,7 @@ services:
     depends_on:
       - postgres
       - redis
-      - nest
+      - backend
 
 networks:
   nx-network:

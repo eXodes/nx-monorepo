@@ -27,9 +27,9 @@ services:
     networks:
       - nx-network
 
-  nest:
-    image: nx-monorepo/nest:alpha
-    container_name: nest
+  backend:
+    image: nx-monorepo/backend:alpha
+    container_name: backend
     ports:
       - "3333:3333"
     environment:
@@ -38,13 +38,13 @@ services:
     networks:
       - nx-network
 
-  sveltekit:
-    image: nx-monorepo/sveltekit:alpha
-    container_name: sveltekit
+  frontend:
+    image: nx-monorepo/frontend:alpha
+    container_name: frontend
     ports:
       - "3000:3000"
     environment:
-      API_URL: http://nest:3333/api
+      API_URL: http://backend:3333/api
     restart: unless-stopped
     networks:
       - nx-network
