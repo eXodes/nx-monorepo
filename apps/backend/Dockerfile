@@ -11,7 +11,7 @@ RUN npm install
 
 EXPOSE 3333
 
-CMD ["nx", "run", "nest:serve"]
+CMD ["nx", "run", "backend:serve"]
 
 FROM node:latest AS build
 
@@ -21,7 +21,7 @@ COPY . .
 
 RUN npm install
 
-RUN npx nx run nest:build
+RUN npx nx run backend:build
 
 RUN npm ci --omit=dev
 
@@ -29,9 +29,9 @@ FROM node:alpine AS serve
 
 USER node:node
 
-WORKDIR /home/apps/nest
+WORKDIR /home/apps/backend
 
-COPY --from=build --chown=node:node /home/dist/apps/nest ./build
+COPY --from=build --chown=node:node /home/dist/apps/backend ./build
 COPY --from=build --chown=node:node /home/node_modules ./node_modules
 
 ENV PORT 3333
